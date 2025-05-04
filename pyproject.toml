@@ -8,3 +8,6 @@ dependencies = [
     "cryptography>=44.0.2",
     "streamlit>=1.44.1",
 ]
+
+[tool.uv]
+package-mode = false
