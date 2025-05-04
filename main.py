@@ -11,7 +11,11 @@ import hashlib
 import os
 
 KEY = load_or_create_key()
-cipher = Fernet(KEY)
+try:
+    cipher = Fernet(KEY)
+except Exception as e:
+    print(e)
+
 
 # if not os.path.exists("secret.key"):
 #     with open("secret.key", "wb") as f:
@@ -68,8 +72,13 @@ def decrypt_data(user, passkey):
     recived_data = retrieve_data(user, hashed_passkey)
 
     if recived_data:
-        decrypt =  cipher.decrypt(recived_data.encode()).decode()
-        print(decrypt)
+        decrypt = None
+        try:
+            decrypt =  cipher.decrypt(recived_data.encode()).decode()
+            print(decrypt)
+        except:
+            print("Incorrect passkey")
+        
         return decrypt
     else:
         return None
