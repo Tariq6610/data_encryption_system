@@ -1,0 +1,37 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.pyo
+*.pyd
+*.so
+*.log
+
+# Build directories
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# IDE/editor settings (optional, e.g., VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Secrets and configuration
+secret.key
+.env
+*.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Streamlit-specific
+.streamlit/
+
+# Lock and dependency files
+*.lock

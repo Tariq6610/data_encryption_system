@@ -1,0 +1,3 @@
+from key_manager import load_or_create_key
+
+load_or_create_key(create_if_missing=True)
