@@ -9,4 +9,7 @@ dependencies = [
     "streamlit>=1.44.1",
 ]
 
+# Explicitly indicate this is not a standard package
+[tool.hatch.build]
+packages = []
 

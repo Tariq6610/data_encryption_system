@@ -182,22 +182,8 @@ def main():
     elif page == "home":
         dashboard()
 
+
         
-
-    
-
-    
-
-
-    
-    
-
-
-    
-
-    
-
-
 
 if __name__ == "__main__":
     main()
