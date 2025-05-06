@@ -8,7 +8,7 @@ import streamlit as st
 st.set_page_config(page_title="Data Encryption System", layout="wide")
 
 # Debug information - comment out in production
-DEBUG = True
+DEBUG = False
 
 if DEBUG:
     st.write("Current directory:", os.getcwd())
