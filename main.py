@@ -1,4 +1,3 @@
-from auth import Users
 from data import DataEncription
 import streamlit as st
 from app_pages.home import home_page
@@ -8,7 +7,6 @@ from app_pages.utils.logout import logout
 from cryptography.fernet import Fernet
 from key_manager import load_or_create_key
 import hashlib
-import os
 
 KEY = load_or_create_key()
 try:
@@ -16,26 +14,7 @@ try:
 except Exception as e:
     print(e)
 
-
-# if not os.path.exists("secret.key"):
-#     with open("secret.key", "wb") as f:
-#         f.write(Fernet.generate_key())
-
-# if os.path.exists("secret.key"):
-#     try:
-#         with open("secret.key", "rb") as f:
-#             KEY = f.read()
-#             print(KEY)
-#             # Attempt to initialize Fernet with the key to validate it
-#             cipher = Fernet(KEY)
-#     except Exception as e:
-#         print(f"❌ Error loading key: {e}")
-#         exit(1)
-    
-
-
-
-    
+  
 
 # Function to hash passkey
 def hash_passkey(passkey):
